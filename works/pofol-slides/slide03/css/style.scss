@@ -1,0 +1,117 @@
+
+.text-center{height: 100px;line-height: 100px;text-align: center;}
+
+
+.slides{
+    // overflow: hidden;
+    position: relative;
+    width: 1120px;
+    height: 450px;
+    margin: 0 auto;
+    border: 1px solid #000;
+
+    >.slides-container{
+        // flex 하는 컨테이너한테 위드값을 줘야 사진들이 안접힘.
+        width: calc(1120px * 7);
+        transition: all 0.4s ease-in-out;
+        display: flex;
+        flex-flow: row nowrap;
+
+        // 맨 뒤에 있어야 할 사진이 앞에 있으니까 레프트 -1120으로 처음에 한칸 옆으로 땡겨 놓는것임.
+        position: absolute;
+        left: -1120px;
+        top: 0;
+        
+
+        >p{
+
+            width: 1120px;
+            background-position: center center;
+            background-size: cover;
+
+            &.slide-1{background-image: url(./../images/slide-1.jpg);}
+            &.slide-2{background-image: url(./../images/slide-2.jpg);}
+            &.slide-3{background-image: url(./../images/slide-3.jpg);}
+            &.slide-4{background-image: url(./../images/slide-4.jpg);}
+            &.slide-5{background-image: url(./../images/slide-5.jpg);}
+
+            >a{
+                display: block;
+                height: 450px;
+                text-indent: -9999px;
+            }
+        }
+    }//end of .slides-container
+
+    >.slides-pagination{
+        position: absolute;
+        right: 90px;
+        top: 50%;
+        margin-top: -150px;
+        border: 1px solid #eee;
+
+        >li{
+            width: 180px;
+
+            &:nth-child(1){background: url(./../images/indicator-1.jpg);}
+            &:nth-child(2){background: url(./../images/indicator-2.jpg);}
+            &:nth-child(3){background: url(./../images/indicator-3.jpg);}
+            &:nth-child(4){background: url(./../images/indicator-4.jpg);}
+            &:nth-child(5){background: url(./../images/indicator-5.jpg);}
+
+            >a{
+                display: block;
+                height: 60px;
+                text-indent: -9999px;
+            }
+
+            &:hover>a,
+            &.on>a{
+                border: 2px solid skyblue;
+                box-sizing: border-box;
+            }
+        }
+    }//end of .slides-pagination
+
+    >.slides-navigation{
+
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 80px;
+        height: 100px;
+        margin-top: -50px;
+        text-indent: -9999px;
+        background-image: url(./../images/btn_navigation.png);
+
+        &.prev{
+            left: 0;
+            background-position: -5px -225px;
+            &:hover{background-position: -5px -335px;}
+        }
+
+        &.next{
+            right: 0;
+            background-position: -5px -5px;
+            &:hover{background-position: -5px -115px;}
+        }
+    }//end of .slides-navigation
+
+    >.btn_auto{
+        display: block;
+        position: absolute;
+        right: 170px;
+        bottom: 40px;
+        width: 20px;
+        height: 20px;
+        text-indent: -9999px;
+        background-image: url(./../images/icons.png);
+        background-position: -62px -24px;
+        cursor: pointer;
+
+        &.pause{
+            background-position: 0 -57px;
+        }//end of .pause
+       
+    }//end of .btn_auto
+}//end of .slides

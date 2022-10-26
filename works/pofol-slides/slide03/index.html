@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <title>무한 슬라이드</title>
+   <link rel="stylesheet" href="css/reset.css" />
+   <link rel="stylesheet" href="css/style.css" />
+   <script src="./js/jquery-1.12.4.min.js"></script>
+   <script defer src="js/function.js"></script>
+</head>
+
+<body>
+   <div id="wrap">
+      <h1 class="text-center">자동실행 슬라이드</h1>
+
+      <!-- 슬라이드 -->
+      <div class="slides">
+         <div class="slides-container">
+
+            <!-- 슬라이드의 1번 페이지에서 이전 버튼을 누를경우 맨 뒤에것이 오려면 이렇게, 맨 뒤에껄 맨 앞에 한장 복사하고. 맨 앞에껄 맨 뒤에서 한장 복사 해야됨. -->
+            <p class="slide-5"><a rel="noopener noreferrer" href="#">최대1만원 추가쿠폰 바캉스세일</a></p>
+
+            <!-- 무한슬라이드의 경우 nth-child로는 안되고 class를 붙여서 bgi작업 필수 -->
+            <p class="slide-1"><a rel="noopener noreferrer" href="#">지금바로, 반짝특가</a></p>
+            <p class="slide-2"><a rel="noopener noreferrer" href="#">올여름 필수아이템은 도브</a></p>
+            <p class="slide-3"><a rel="noopener noreferrer" href="#">지금이기회, 창고대방출 50%</a></p>
+            <p class="slide-4"><a rel="noopener noreferrer" href="#">와우회원전용 빅세일</a></p>
+            <p class="slide-5"><a rel="noopener noreferrer" href="#">최대1만원 추가쿠폰 바캉스세일</a></p>
+
+            <p class="slide-1"><a rel="noopener noreferrer" href="#">지금바로, 반짝특가</a></p>
+         </div>
+
+         <ul class="slides-pagination">
+            <li class="on"><a rel="noopener noreferrer" href="#">생수/음료</a></li>
+            <li><a rel="noopener noreferrer" href="#">올여름 필수템</a></li>
+            <li><a rel="noopener noreferrer" href="#">창고대방출</a></li>
+            <li><a rel="noopener noreferrer" href="#">빅세일</a></li>
+            <li><a rel="noopener noreferrer" href="#">이니스프리</a></li>
+         </ul>
+
+         <a rel="noopener noreferrer" href="#" class="slides-navigation prev">이전</a>
+         <a rel="noopener noreferrer" href="#" class="slides-navigation next">다음</a>
+
+         <a rel="noopener noreferrer" href="#" class="btn_auto pause">재생</a>
+      </div>
+
+      <address class="text-center">&copy; Designed by 홍길동</address>
+   </div>
+
+
+</body>
+
+</html>
