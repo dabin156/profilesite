@@ -1,0 +1,1159 @@
+$pri-color:#009591;
+
+@mixin a-height{
+    display: block;
+    height: 25px;
+    font-weight: 800;
+}
+
+@mixin font{
+    display: block;
+    height: 29px;
+    color: #222;
+    font-size: 18px;
+    font-weight: 600;
+    @content;
+}
+
+@mixin text-indent{
+    text-indent: -9999px;
+}
+
+@mixin col-famliy{
+    color: #666;
+    font-weight: 600;
+    font-family: 'NotoSans_Regular';
+
+    @content;
+}
+
+@mixin texdeco{
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+
+
+#wrap{
+
+>header{
+
+    height: 100px;
+    border-bottom: 1px solid $pri-color;
+
+    >div.h-container{
+        position: relative;
+        width: 1150px;
+        height: 100px;
+        margin: 0 auto;
+
+        // 하나은행 로고
+        >.logo{
+            position: absolute;
+            bottom: 20px;
+            width: 105px;
+            background-image: url(./../images/logo.png);
+
+            >a{
+                display: block;
+                height: 29px;
+                text-indent: -9999px;
+            }
+        }//end of .logo
+
+        >nav{
+            width: 500px;
+            height: 100px;
+            margin: 0 auto;
+      
+            >.gnb{
+                position: absolute;
+                display: flex;
+                top: 60px;
+                z-index: 100;
+ 
+                >li{
+                    width: 100px;
+                    height: 40px;
+                    padding-right: 10px;
+
+                    &:hover>a{
+                        color: $pri-color;
+                        font-weight: 800;
+                    }
+
+                    >a{
+                       display: block;
+                       height: 29px;
+                       color: #222;
+                       font-size: 18px;
+                       font-weight: 600;
+                       font-family: 'NotoSans_Regular';
+                    }
+        
+                    >div.lnb-container{
+                     position: relative;
+                     width: 2000px;
+                     height: 300px;
+                     margin-top: 12px;
+                     margin-left: -705px;
+                     background-color: #fff;
+                     border-bottom: 1px solid #ccc;
+
+                     &.lnb1{
+                        display: none;
+
+                        >ol{
+                            >.bar{height: 300px;}
+                        }                    
+                    }
+
+
+                     &.lnb2{
+                        display: none;
+                        height: 650px;
+                        margin-left: -805px;
+                        >ol{
+                            left: 400px;
+                        }
+
+                        >.bar{height: 650px;}
+                     }
+
+                     &.lnb3{
+                        display: none;
+                        margin-left: -905px;
+                        height: 440px;
+                        >ol{
+                            left: 400px;
+                        }
+                        >.lnb-bottom{top: 300px;}
+
+                        >.bar{height: 440px;}
+                     }
+
+                     &.lnb4{
+                        display: none;
+                        height: 480px;
+                        margin-left: -1005px;
+                        >ol{
+                            left: 400px;
+                        }
+                        >.lnb-bottom{top: 300px;}
+                        >.bar{height: 480px;}
+                     }
+
+                     &.lnb5{
+                        display: none;
+                        margin-left: -1105px;
+                        height: 380px;
+
+                        >.bar{height: 380px;}
+                     }
+
+                        // lnb-container 공통 및 lnb1의 ol 포지션
+                        >ol{
+                            position: absolute;
+                            top: 20px;
+                            left: 400px;
+                            display: flex; 
+                            width: calc(240px * 5);
+                            height: 150px;
+
+                            >li{
+                                width: 240px;
+                                height: 200px;
+        
+                                >a{
+                                    display: block;
+                                    height: 30px;
+                                    color: #222;
+                                    font-size: 16px;
+                                    font-weight: 800;
+                                }
+
+                                >.lnb_list{
+
+                                    >li{
+                                        &:hover>a{
+                                            color: $pri-color;
+                                            text-decoration: underline;
+                                        }
+
+                                        >a{
+                                            @include a-height;
+                                        }
+                                    }
+
+                                   // 외화송금
+                                   &.currency{
+                                    >li{
+                                        &:nth-child(2){background-image: url(./../images/icon-15-open.png); background-position: 140px 0;}
+                                        &:nth-child(3){background-image: url(./../images/icon-15-open.png); background-position: 95px 0;}
+                                        &:nth-child(7){background-image: url(./../images/icon-15-open.png); background-position: 120px 0;}
+                                        &:nth-child(9){background-image: url(./../images/icon-15-open.png); background-position: 140px 0;}
+                                        background-repeat: no-repeat;
+                                    }
+                                   }//end of .currency
+
+                                }//end of lnb_list
+                            }//end of li
+
+                        }//end of ol
+
+                        >.bar{
+                            position: absolute;
+                            height: 300px;
+                            border-right: 1px solid #ccc;
+                            
+                            &.bar1{
+                               right: 660px;
+                            }
+
+                            &.bar2{
+                               right: 910px;
+                            }
+                            
+                            &.bar3{
+                                left:850px;
+                            }
+                            &.bar4{
+                               left: 610px;
+                            }
+                        }
+
+                    
+                        >ol.lnb-bottom{ 
+                            position: absolute;
+                            top: 200px;
+                            width: calc(240px * 5);
+                            height: 100px;
+
+                            >li{
+                                width: 240px;
+
+                                >a{
+                                    display: block;
+                                    height: 30px;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                }
+
+                                >.lnb_list{
+
+                                // 수표,어음 더보기+ 
+                                &.check{
+                                    >li{
+                                        width: 200px;
+                                        height:20px;
+
+                                        &:nth-last-of-type(1){
+                                            background-image: url(./../images/icon-15-open.png);
+                                            background-position: 58px 0;
+                                        }
+                                        &:nth-last-of-type(2){
+                                            background-image: url(./../images/icon-15-open.png);
+                                            background-position: 65px 0;
+                                        }
+                                        background-repeat: no-repeat;
+                                        >a{
+                                            @include a-height;
+                                        }
+                                    }
+                                }//end of .check
+
+
+                                    // 이체 서비스
+                                   &.service{
+                                    >li{
+                                        &:nth-child(1){background-image: url(./../images/icon-15-open.png);}
+                                        &:nth-child(2){background-image: url(./../images/icon-15-open.png);}
+                                        &:nth-child(3){background-image: url(./../images/icon-15-open.png); background-position: 80px 0;}
+                                        &:nth-child(5){background-image: url(./../images/icon-15-open.png);}
+                                        &:nth-child(6){background-image: url(./../images/icon-15-open.png); background-position: 90px 0;}
+                                        &:nth-child(7){background-image: url(./../images/icon-15-open.png); background-position: 100px 0;}
+
+                                        background-position: 55px 0;
+                                        background-repeat: no-repeat;
+
+                                    }
+                                   }
+
+                                   // 계좌이동,관리    
+                                   &.manage{
+                                    >li{
+                                        &:nth-child(3){background-image: url(./../images/icon-15-open.png);}
+                                        background-position: 55px 0;
+                                        background-repeat: no-repeat;
+                                    }
+                                   }
+
+                                   &.auto{
+
+                                    >li{
+
+                                        >a{
+                                            @include a-height();
+                                        }
+                                    }
+                                   }
+                                }
+
+
+
+                            }//end of li
+                        }//end of ol.lnb-bottom
+
+                    }//end of div.lnb-container
+
+                    >div.lnb-three{
+                        display: none;
+                        position: absolute;
+                        left: -300px;
+                        bottom: -20px;
+
+                        >ol{
+                            width: 150px;
+                            height: 150px;
+                            >li{
+                                width: 150px;
+                                >a{
+                                    @include font();
+                                }
+
+                                >.lnb_list{
+                                    >li{
+                                        &:hover>a{
+                                            color: $pri-color;
+                                            text-decoration: underline;
+                                        }
+                                        >a{
+                                            @include a-height;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }//end of li
+            }//end of gnb
+        }//end of nav
+
+
+        // 기업뱅킹,은행소개
+        >.banking{
+            position: absolute;
+            top: 10px;
+            display: flex;
+            width: 240px;
+
+            >li{
+              width: 60px;
+                >a{
+                   font-size: 12px;
+                   font-weight: 600;
+
+                   &:hover{@include texdeco();}
+                }
+            }
+        }//end of .banking
+
+        >.snb{
+            position: absolute;
+            display: flex;
+            top: 10px;
+            right: 105px;
+            width: 100px;
+            >li{
+                width: 50px;
+                >a{
+                    font-size: 12px;
+                    font-weight: 600;
+
+                    &:hover{@include texdeco();}
+                }
+            }
+        }//end of .snb
+
+        >.Language{
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 0;
+            width: 80px;
+            font-size: 12px;
+            font-weight: 600;
+            background-image: url(./../images/icon-20-arrow-down-000.png);
+            background-size: contain;
+            background-position: 60px 1px;
+            background-repeat: no-repeat;
+        }
+
+        // 돋보기, 메뉴판
+        >.search{
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+            display: flex;
+            width: 80px;
+
+            >li{
+
+                width: 40px;
+                height: 30px;     
+
+                &:nth-child(1){
+                    background-image: url(./../images/icon-30-search.png);
+                    
+                    &:hover{background-image: url(./../images/icon-30-search-hover.png);}
+                }
+
+                &:nth-child(2){
+                    background-image: url(./../images/icon-30-menu-all.png);
+
+                    &:hover{background-image: url(./../images/icon-30-menu-all-hover.png);}
+                
+                }
+
+                background-repeat: no-repeat;
+
+                >a{
+                    display: block;
+                    text-indent: -9999px;
+                }
+            }
+        }//end of .search
+
+        >.bigsech{
+            display: none;
+            position: absolute;
+            left: -400px;
+            width: 2000px;
+            height: 230px;
+            z-index:100;
+            background-color:#fff;
+            border-top: 1px solid #ccc;
+            >p{
+                height: 230px;
+                line-height: 230px;
+                font-size: 35px;
+                text-align: center;
+                @include col-famliy();
+            }
+            >a{
+                display: block;
+                position: absolute;
+                top: 85px;
+                right: 410px;
+                width: 100px;
+                height: 50px;
+                line-height: 50px;
+                color: #6e6e6e;
+                font-size: 16px;
+                text-align: center;
+                background-color:#ccc;
+                border-radius: 25px;
+               
+            }
+        }
+
+    }//end of div.h-container
+
+}//end of header
+
+>section{
+
+    background-color: #fafcfb;
+
+    >h2{ @include text-indent();}
+
+    >article{
+        width: 1150px;
+        margin: 0 auto;
+
+        >h2{ @include text-indent();}
+        
+        >div.slides{
+                overflow: hidden;
+                position: relative;
+                width: 760px;
+                height: 440px; 
+
+                >ul{
+                    position: absolute;
+                    left: -760px;
+                    display: flex;
+                    width: calc(760px * 8);
+                    >li{
+                        width: 760px;
+                        height: 440px;
+
+                        &.slide-1{background-image: url(./../images/sl-1.jpg);}
+                        &.slide-2{background-image: url(./../images/sl-2.jpg);}
+                        &.slide-3{background-image: url(./../images/sl-3.jpg);}
+                        &.slide-4{background-image: url(./../images/sl-4.png);}
+                        &.slide-5{background-image: url(./../images/sl-5.png);}
+                        &.slide-6{background-image: url(./../images/sl-6.jpg);}
+
+                        >div.p-container{
+                            position: absolute;
+                            top: 70px;
+                            left: 0;
+                            width: 430px;
+                            height: 350px;
+
+                            &.no1{left: 760px;}
+                            &.no2{left: 1520px;}
+                            &.no3{left: 2280px;}
+                            &.no4{left: 3040px;}
+                            &.no5{left: 3800px;}
+                            &.no6{left: 4560px;}
+
+
+                            >p{
+                                height: 30px;
+                                text-indent: 0;
+                                font-size: 16px;
+                                font-weight: 600;
+                                font-family:'NotoSans_Regular';
+
+                                &:nth-child(1){
+                                    width: 65px;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    text-align: center;
+                                    border: 1px solid #ccc;
+                                }
+                                &:nth-child(2){height: 50px; font-size: 35px; color: #222; margin-top: 30px;}
+                                &:nth-child(3){height: 50px; font-size: 35px; color: #222;}
+
+                                >a{
+                                    display: block;
+                                    width: 100px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    color: #ededed;
+                                    background-color: #222;
+                                    margin-top: 30px;
+                                    border-radius: 30px;
+
+                                    &:hover{text-decoration: underline;}
+                                }
+                            }
+                        }
+                    }
+                }//end of ul
+
+            >.btn_nav{
+                    position: absolute;
+                    bottom: 50px;
+                    left: 500px;
+                    width: 108px;
+                    height: 28px;
+                    border-radius: 15px;
+                    background-color: #ccc;
+
+                    &:hover{background: #222;}
+                    >a{
+                        position: absolute;
+                        display: block;
+                        width: 100px;
+                        height: 25px;
+                        @include text-indent();
+                        background-repeat: no-repeat;
+
+                        &.auto{
+                            top: 10px;
+                            left: 15px;
+                            background-image: url(./../images/btn_main_autoplay_play.png);
+
+                            &.pause{background-image: url(./../images/btn_main_autoplay_pause.png);}
+                        }
+
+                        &.prev{
+                            top: 4px;
+                            left: 30px;
+                            background-image: url(./../images/icon-main-arrow-left.png);
+                        }
+
+                        &.next{
+                            top: 4px;
+                            left:75px;
+                            background-image: url(./../images/icon-main-arrow-right.png);
+                        }
+                    }//end of a
+
+                    >p{
+                        position: absolute;
+                        left: 62px;
+                        bottom: 3px;
+                        width: 20px;
+                        height: 20px;
+                        color: #eee;
+                        font-size: 12px;
+                        font-weight: 800;
+                        text-indent: 0;
+                    }
+
+                    >.count{
+                        width: 20px;
+                        height: 20px;
+                        text-indent: -11px;
+
+                    }
+
+                }//end of div.btn_nav
+
+            >.btn_menu{
+                    position: absolute;
+                    right: 115px;
+                    bottom: 50px;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 100%;
+                    background-color: #ccc;
+                    @include text-indent();
+
+                    &:hover{background: #222;}
+
+                    >a{
+                        display: block;
+                        position: absolute;
+                        top: 8px;
+                        left: 9px;
+                        width: 10px;
+                        height: 10px;
+                        background-image: url(./../images/btn_slide_all.png);
+                    }
+                }//end of .btnmenu
+
+
+        }//end of div.slides
+
+        // 조회,이체 큰덩이 두개
+        >.inquire{
+            position: absolute;
+            top: 170px;
+            right: 50%;
+            display: flex;
+            justify-content: space-between;
+            width: 340px;
+            height: 130px;
+            margin-right: -570px;
+            >li{
+                width: 160px;
+                background-color: $pri-color;
+                border-radius: 10px;
+
+                &:nth-child(2){background-color: #323850;}
+
+                >a{
+                    display: block;
+                    height: 130px;
+                    line-height: 195px;
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: 800;
+                    text-indent: 20px;
+
+                    &:hover>span{display: block;}
+
+                    >span{
+                        display: none;
+                        color: #fff;
+                        font-size: 20px;
+                        font-weight: 800;
+                        text-indent: 65px;
+                        margin-top: -195px;
+                    }
+                }
+                
+            }
+        }//end of .inquire
+
+
+        // 섹션 아이콘 6개
+        >div.icon-container{
+
+                position: absolute;
+                top: 340px;
+                right: 50%;
+                width: 340px;
+                margin-right: -570px;
+
+                >.icon{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 300px;
+                    height: 100px;
+                    margin: 0 auto;
+
+                    >figure{
+
+                        >a{
+                            display: block;
+
+                            >img{
+                                display: block;
+                                width: 60px;
+                                height: 60px;
+                            }
+                        }
+
+                        >figcaption{
+                            >a{
+                                display: block;
+                                font-size: 14px;
+                                font-weight: 600;
+                                font-family: 'NotoSans_Regular';
+                                text-align: center;
+
+                                &:hover{
+                                    color: #000;
+                                    font-weight: 800;
+                                }
+                            }
+                        }
+                    }//end of figure
+                }//end of .icon
+        }//end of .icon-container
+
+    }//end of article
+
+    >.shadow{
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.75);
+        z-index: 1000;
+
+        > .lightbox{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            display: flex;
+            width: calc(400px * 4);
+            height: 500px;
+            margin-top: -400px;
+            margin-left: -750px;
+            text-align: center;
+
+            >a{
+                >img{
+                    border-radius: 15px;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            >button{
+                position: absolute;
+                top: -65px;
+                right:190px;
+                width: 50px;
+                height: 50px;
+                color: #eee;
+                font-size: 25px;
+                border-radius: 100%;
+                background-color: #222;
+            }
+        }
+    }
+}//end of section
+
+>main{
+    background-color: #ecf0f1;;
+    >div{
+        position: relative;
+        width: 1100px;
+        height: 150px;
+        margin: 0 auto;
+        >ol.m-center{
+            display: flex;
+            align-items: center;
+            height: 150px;
+
+            li{
+                width: 220px;
+                margin-top: -10px;
+                
+                >a{
+                    display: block;
+                    height:30px;
+                    line-height: 30px;
+                    color: #222;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: center;
+
+                    &:hover{
+                        color: #222;
+                        font-weight: 800;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        >ol.m-sub{
+            display: flex;
+            align-items: center;
+            height: 150px;
+            margin-top: -130px;
+
+            li{
+                width: 220px;
+                
+                >a{
+                    display: block;
+                    height:30px;
+                    line-height: 30px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: center;
+                }
+            }
+        }
+
+        >.bar{
+            position: absolute;
+            bottom: 48px;
+            display: block;
+            height: 45px;
+            border-right: 1px solid #ccc;
+
+            &.bar1{left: 220px;}
+            &.bar2{left: 440px;}
+            &.bar3{right: 220px;}
+            &.bar4{right: 440px;}
+        }
+
+    }//end of div
+}//end of main
+
+// 공지~ 푸터 이전의 앱 바로가기 아이콘 6개
+>section.notice{
+    height: 350px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+
+    >h2{@include text-indent();}
+
+    // 새소식,자료실
+    >div.note-container{
+        position: relative;
+        width: 1100px;
+        height: 150px;
+        margin: 30px auto;
+
+        >.new{
+            display: flex;
+            width: 720px;
+
+            &.head{
+                height: 40px;
+                >p{
+                    width: 643px;
+                    color: #222;
+                    font-size: 16px;
+                    font-weight: 800;
+                    pointer-events: none;
+                }
+                >a{
+                    display: block;
+                    color: #666;
+                    font-size: 13px;
+                    font-weight: 800;
+
+                    &:hover{text-decoration:underline;}
+                }
+            }
+
+            >p{
+                width: 720px;
+                height: 30px;
+
+                &:first-child:hover{text-decoration: underline;}
+                &:last-child>a{color: #666;}
+
+                >a{
+                    display: block;
+                    width: 620px;
+                    height: 30px;
+                    color: #222;
+                    font-size: 13px;
+                    font-weight: 800;
+                }
+            }
+        }//end of new
+
+        >div.archives{
+            position: absolute;
+            top: -10px;
+            right: 0;
+            width: 320px;
+            height: 150px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+
+            >ol{
+                display: flex;
+                justify-content: space-between;
+
+                &:nth-of-type(3)>li{border-bottom: none;}
+              
+                >li{
+                    width: 160px;
+
+                    border-right: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+
+                    &:last-child{border-right:none;}
+
+                    &.speak>a{line-height: 35px;}
+
+                    &:hover{background-color: #eee; text-decoration: underline;}
+                    >a{
+                        display: block;
+                        height: 50px;
+                        line-height: 50px;
+                        color:#323850;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-align: center;
+
+                        >span{
+                            display: block;
+                            line-height: 0;
+                        }
+                    }
+                }
+            }
+ 
+        }//end of archives
+
+    }//end of div.note-container
+
+    >div.app{
+        width: 900px;
+        margin: 0 auto;
+        >ol{
+            display: flex;
+            justify-content: space-between;
+
+            >li{
+                width: 70px;
+
+                &:nth-child(1){background-image: url(./../images/hana_app01.png);}
+                &:nth-child(2){background-image: url(./../images/hana_app02.png);}
+                &:nth-child(3){background-image: url(./../images/hana_app03.png);}
+                &:nth-child(4){background-image: url(./../images/hana_app04.png);}
+                &:nth-child(5){background-image: url(./../images/hana_app05.png);}
+                &:nth-child(6){background-image: url(./../images/hana_app06.png);}
+                >a{
+                    display: block;
+                    height: 70px;
+                    @include text-indent();
+                }
+            }
+        }
+
+    }//end of div.app
+
+}//end of section.notice
+
+>footer{
+    height: 250px;
+    >div.f-container{
+        position: relative;
+        width: 1100px;
+        margin: 30px auto;
+
+        >div{
+            width: 800px;
+            height: 80px;
+            >ol{
+                display: flex;
+                >li{
+                    padding-right: 7px;
+
+                    &.on{font-weight: 800;}
+                    &:hover>a{
+                        @include texdeco();
+                    }
+
+                    >a{
+                        display: block;
+                        height: 30px;
+                        color: #666;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }//end of div
+
+        >ol.f-icon{
+            display: flex;
+            justify-content: space-between;
+            width: 220px;
+            height: 70px;
+            >li{
+                &:nth-child(1){
+                    width: 50px;
+                    background-image: url(./../images/wa-mark.png);
+                }
+
+                &:nth-child(2){
+                    width: 97px;
+                    background-image: url(./../images/iso-mark.png);
+                }
+
+                &:nth-child(3){
+                    width: 43px;
+                    background-image: url(./../images/isms-mark-black.png);
+                }
+
+                background-repeat: no-repeat;
+
+                >a{
+                    display: block;
+                    height: 32px;
+                    @include text-indent();
+                }
+            }
+        }//end of ol.f-icon
+
+        >div.cs{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 100px;
+            >p{
+                height: 30px;
+                text-align: right;
+                font-weight: 800;
+                color: #222;
+
+                &:nth-child(odd){
+                    color: $pri-color;
+                    font-size: 14px;
+                }
+
+                &:nth-child(even){
+                    font-size: 23px;
+                }
+
+                &:nth-child(3){
+                    margin-top: 10px;
+                }
+
+            }//end of p
+        }//end of div.cs
+
+        >div.network{
+            position: relative;
+            width: calc(185px * 4);
+            height: 50px;
+            line-height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            >ul{
+                display: flex;
+                >li{
+                    width: 185px;
+                    border-right: 1px solid #ccc;
+                    &:last-child{border-right:none;}
+
+                    background-image: url(./../images/icon-20-arrow-top-666.png);
+                    background-position: 145px 16px;
+
+                    &:nth-child(3){background-image: url(./../images/icon-arrow.png);}
+
+                    background-repeat: no-repeat;
+
+                    >div.net-sub{
+                        display: none;
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+                        position: absolute;
+                        bottom: 51px;
+                        width: 183px;
+                        height: 250px;
+                        background-color: #fff;
+                        border: 1px solid #222;
+                        border-bottom: none;
+                        border-radius: 10px 10px 0 0;
+
+                        &::-webkit-scrollbar{width: 5px;}
+                        &::-webkit-scrollbar-thumb{background-color: gray; border-radius: 10px;}
+
+                         >p{
+                            width: 185px;
+                            border-bottom: 1px solid #ccc;
+                            &:last-child{border-bottom: none;}
+
+                             >a{
+                                 display: block;
+                                 height: 48px;
+                                 line-height: 48px;
+                                 @include col-famliy();
+                                 text-indent: 15px;
+                             }
+                         }
+                    }//end of div.net-sub
+
+                    >a{
+                      display: block;
+                      height: 50px;
+                      line-height: 50px;
+                      @include col-famliy();
+                      text-indent: 15px;
+                    }
+                }
+            }
+        }//end of div.network
+
+        >div.consumer{
+            position: absolute;
+            top:150px;
+            right: 0;
+            width: 230px;
+            height: 50px;
+            background-color: #eee;
+            background-image: url(./../images/icon-customer.png);
+            background-position: 22px 15px;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            >p{
+                width: 230px;
+
+                background-image: url(./../images/icon-20-arrow-right-666.png);
+                background-position: 190px 16px;
+                background-repeat: no-repeat;
+                >a{
+                    display: block;
+                    height: 50px;
+                    line-height: 50px;
+                    @include col-famliy();
+                    text-indent: 50px;
+                    
+                }
+            }
+        }
+
+    }//end of div.f-container
+}//end of footer
+
+
+
+
+
+
+}//end of #wrap

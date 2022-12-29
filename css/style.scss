@@ -444,6 +444,9 @@ section#aboutme{
         }
 
         >.myphoto{
+          display: flex;
+          justify-content: center;
+          align-items: center;
           overflow: hidden;
           background-image: url(./../images/aboutme/photo-frame.png);
           background-position: center bottom;
@@ -453,8 +456,7 @@ section#aboutme{
           >img{
             display: block;
             position: relative;
-            z-index: -1;//-1값 설정시 가장 아래 바닥으로 깔린다.
-            margin: 0px 0 0 -50px;
+            z-index: -1;
           }
         }//end of .myphoto
 
@@ -1009,120 +1011,6 @@ section#ability{
       }//end of .item
     }//end of piechart
   }//end of .container
-
-  >.resume{
-    padding: 50px 0;
-    background-color: #fff;
-    @media #{$mobile}{
-      padding-bottom: 0;
-    }
-
-    > div {
-      padding: 0 30px;
-      display: flex;
-      justify-content: center;
-
-      @media #{$mobile}{
-        display: block;
-      }
-
-      > .frame {
-        display: block;
-        overflow: hidden;
-        width: 520px;
-        height: 340px;
-        margin-right: 50px;
-        border: 1px solid #000;
-
-        @media #{$mobile}{
-          width: 100%;
-          height: auto;
-          margin-right: 0;
-          margin-bottom: 10px;
-        }
-
-        > img {
-          display: block;
-          width: 100%;
-          box-shadow: 1px 1px 5px #ccc;
-        }
-      }
-
-      > .iam {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-
-        > p {
-          line-height: 26px;
-
-          > span {
-            display: block;
-
-            @media #{$mobile}{
-              display: inline;
-            }
-          }
-        }
-
-        > a {
-          display: block;
-          width: 260px;
-          height: 40px;
-          color: #fff;
-          line-height: 40px;
-          letter-spacing: 1px;
-          text-align: center;
-          background-color: #222;
-          transition: all 0.2s;
-
-          @media #{$mobile}{
-            display: none;
-          }
-
-          &:hover {
-            background-color: $pri-color-2;
-          }
-        }
-
-        > .shadow {
-          display: none;
-          position: fixed;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.5);
-          z-index: 1000;
-          /* opacity: 0.75; */
-
-          > .lightbox {
-            display: block;
-            overflow-y: scroll;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            width: 1200px;
-            height: 800px;
-            margin: -400px 0 0 -600px;
-
-            > img {
-              display: block;
-              width: 100%;
-            }
-          }//end of .lightbox
-
-          > .clse {
-            display: block;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: 370px 0 0 540px;
-          }
-        }//end of .shadow
-      }//end of .iam
-    }//end of div
-  }//end of resume
 }//end of #ability
 
 

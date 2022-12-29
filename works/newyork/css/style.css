@@ -1,0 +1,320 @@
+@charset "utf-8";
+
+
+#wrap{
+ width: 800px;
+ height: 3000px;
+ margin: 0 auto;
+
+}
+
+
+header{position: relative;}
+
+header>h1{
+    margin-top: 60px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: rgb(10, 10, 172);
+}
+
+/* 로고 */
+
+header>.logo{
+    position: fixed;
+    top: 11px;
+    left: 11px;
+    bottom: 5px;
+    width: 40px;
+    z-index: 30;
+}
+header>.logo>a{
+    display: block;
+    height: 40px;
+    text-indent: -9999px;
+    background-image: url(./../images/logo.jpg);
+   
+}
+
+
+
+
+/* 네비 */
+header>nav{
+position: fixed;
+top: 0;
+left: 0;
+ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#feffff+0,ddf1f9+35,a0d8ef+100;Blue+3D+%2318 */
+background: rgb(254,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(254,255,255,1) 0%, rgba(221,241,249,1) 35%, rgba(160,216,239,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(254,255,255,1) 0%,rgba(221,241,249,1) 35%,rgba(160,216,239,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(254,255,255,1) 0%,rgba(221,241,249,1) 35%,rgba(160,216,239,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */
+z-index: 20;
+
+}
+header>nav>.gnb{
+    display: flex;
+    flex-flow: row nowrap;
+}
+header>nav>.gnb>li{
+   width: calc(120px * 4);
+}
+
+
+header>nav>.gnb>li:hover>a{
+    color: rgb(6, 6, 124);
+    background-color: aliceblue;
+    text-shadow: 2px 2px 10px skyblue;
+}
+
+header>nav>.gnb>li.on>a{color:blueviolet}
+
+header>nav>.gnb>li>a{
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: rgb(46, 154, 241);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
+section{
+    height: 900px;
+    
+}
+
+section>h2{
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    color: #000;
+}
+
+
+/* 슬라이드 */
+section>.slides{
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+    height: 500px;
+}
+
+section>.slides>.sl-container{
+   
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(800px * 4);
+    transition: all 0.4s ease-in-out;
+    
+
+}
+
+section>.slides>.sl-container>li{
+    overflow: hidden;
+    width: 800px;
+    background-position:center center;
+
+}
+
+/* 관광지 */
+section>.slides>.sl-container>li:nth-child(1){background-image: url(./../images/sl1.jpg);}
+section>.slides>.sl-container>li:nth-child(2){background-image: url(./../images/sl2.jpg);}
+section>.slides>.sl-container>li:nth-child(3){background-image: url(./../images/sl3.jpg);}
+section>.slides>.sl-container>li:nth-child(4){background-image: url(./../images/sl4.jpg);}
+
+section>.slides>.sl-container>li>a{
+    display: block;
+    height: 500px;
+    text-indent: -9999px;
+}
+
+/* 맛집 */
+
+section>.eat>.eat-container>li:nth-child(1){background-image: url(./../images/eat-sl1.jpg);}
+section>.eat>.eat-container>li:nth-child(2){background-image: url(./../images/eat-sl2.jpg);}
+
+
+
+section>.eat{
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+    height: 500px;
+}
+
+section>.eat>.eat-container{
+    
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(800px * 4);
+    transition: all 0.4s ease-in-out;
+    
+    
+}
+
+section>.eat>.eat-container>li{
+    overflow: hidden;
+    width: 800px;
+    background-position:center center;
+    
+}
+
+section>.eat>.eat-container>li>a{
+    display: block;
+    height: 500px;
+    text-indent: -9999px;
+}
+
+
+/* 축제 */
+section>.fsval>.fsval-container>li:nth-child(1){background-image: url(./../images/fest-sl1.jpg);}
+section>.fsval>.fsval-container>li:nth-child(2){background-image: url(./../images/fest-sl2.jpg);}
+section>.fsval>.fsval-container>li:nth-child(3){background-image: url(./../images/fest-sl3.jpg);}
+section>.fsval>.fsval-container>li:nth-child(4){background-image: url(./../images/fest-sl4.jpg);}
+
+
+
+
+section>.fsval{
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+    height: 500px;
+}
+
+section>.fsval>.fsval-container{
+    
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(800px * 4);
+    transition: all 0.4s ease-in-out;
+    
+    
+}
+
+section>.fsval>.fsval-container>li{
+    overflow: hidden;
+    width: 800px;
+    background-position:center center;
+    
+}
+
+section>.fsval>.fsval-container>li>a{
+    display: block;
+    height: 500px;
+    text-indent: -9999px;
+}
+
+
+/* 기념품 */
+section>.store>.store-container>li:nth-child(1){background-image: url(./../images/stor-sl1.jpg);}
+section>.store>.store-container>li:nth-child(2){background-image: url(./../images/stor-sl2.jpg);}
+
+
+
+
+
+section>.store{
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+    height: 500px;
+}
+
+section>.store>.store-container{
+    
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(800px * 4);
+    transition: all 0.4s ease-in-out;
+    
+    
+}
+
+section>.store>.store-container>li{
+    overflow: hidden;
+    width: 800px;
+    background-position:center center;
+    
+}
+
+section>.store>.store-container>li>a{
+    display: block;
+    height: 500px;
+    text-indent: -9999px;
+}
+
+
+/* 하단 썸넬 */
+
+section>article{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 800px;
+    height: 400px;
+    margin-left: -53px;
+    
+}
+
+section>article>h3{
+    text-indent: -9999px;
+}
+
+section>article>figure{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+section>article>figure>a>img{
+    border-radius: 8px;
+}
+
+section>article>figure>figcaption{
+    width: 226.6666px;
+    height: 300px;
+    font-weight: 800;
+    text-align: center;
+}
+
+section>article>figure>figcaption>span{
+    font-weight: 300;
+
+}
+
+aside{
+    position: fixed;
+    right: 50%;
+    margin-right: -600px;
+    bottom: 25px;
+}
+
+aside>a.top{
+    display: block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background-color:gray;
+}
+
+aside>a.top:hover{
+    background-color: #ccc;
+}
+
+aside>a.top>i{color: #fff;}

@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>하나은행</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/jquery.min.js"></script>
+    <script defer src="./js/function.js"></script>
+</head>
+
+
+<body>
+    
+<div id="wrap">
+
+<header>
+    <div class="h-container">
+
+        <h1 class="logo"><a rel="noopener noreferrer" href="#">하나은행</a></h1>
+
+        <nav>
+            <ul class="gnb">
+                <li>
+                    <a class="nav1" rel="noopener noreferrer" href="#">조회</a>
+
+                    <div class="lnb-container lnb1">
+                        <ol>
+                            <li><a rel="noopener noreferrer" href="#">계좌조회</a></li>
+
+                            <li><a rel="noopener noreferrer" href="#">거래내역조회</a></li> 
+        
+                            <li>
+                                <a rel="noopener noreferrer" href="#">거래중지/휴면계좌조회</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">거래중지계좌조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">휴면계좌조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">장기미거래신탁</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">미수령연금신탁</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">미수령주식찾기</a></li>
+                                </ol>
+
+                            </li>    
+                              
+                            <li>
+                                <a rel="noopener noreferrer" href="#">해지계좌 조회</a>
+            
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">해지계좌 조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">해지(지급)예상조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">해지계좌조회</a></li>
+                                </ol>
+
+                            </li>
+        
+                            <li><a rel="noopener noreferrer" href="#">세금우대한도조회</a></li>
+
+                        </ol>
+
+                        <ol class="lnb-bottom">
+
+                            <li><a rel="noopener noreferrer" href="#">기일도래현황</a></li>
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">기타조회</a>
+        
+                                <ol class="lnb_list check">
+                                    <li><a rel="noopener noreferrer" href="#">수표/어음</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">전자어음</a></li>
+                                </ol>
+                            </li> 
+                        </ol>
+
+                        <p class="bar bar1"></p>
+                        <p class="bar bar2"></p>
+                        <p class="bar bar3"></p>
+                        <p class="bar bar4"></p>
+
+                    </div>
+                </li>
+        
+                <li>
+                    <a class="nav2" rel="noopener noreferrer" href="#">이체</a>
+                    <div class="lnb-container lnb2">
+                        <ol>
+                            <li><a rel="noopener noreferrer" href="#">계좌이체</a></li>
+
+
+                            <li><a rel="noopener noreferrer" href="#">심플이체</a></li> 
+
+
+                            <li><a rel="noopener noreferrer" href="#">다계좌이체</a></li> 
+
+        
+                            <li>
+                                <a rel="noopener noreferrer" href="#">이체 결과조회</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">계좌이체내역조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">지연이체내역조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">폰뱅킹이체내역조회</a></li>
+                                </ol>
+                            </li>    
+
+                                
+                            <li>
+                                <a rel="noopener noreferrer" href="#">예약이체</a>
+            
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">예약이체등록</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">예약이체내역조회</a></li>
+                                </ol>
+
+                            </li>
+                        </ol>
+
+                        <ol class="lnb-bottom">
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">자동이체</a>
+        
+                                <ol class="lnb_list auto">
+                                    <li><a rel="noopener noreferrer" href="#">계좌간 자동이체 등록</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">자동이체 조회/변경/취소</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">관리비자동납부</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">전화요금자동납부</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">이동통신요금자동납부</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">국민연금/국민건강보험료 자동납부</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">서울시지방세자동납부</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">카드대금자동납부</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">하나머니자동이체</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">자동이체내역조회</a></li>
+                                </ol>
+                            </li> 
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">기타이체서비스</a>
+            
+                                <ol class="lnb_list service">
+                                    <li><a rel="noopener noreferrer" href="#">그룹이체</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">파일이체</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">증권자금이체</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">중도금납부</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">연금납부</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">이체수수료조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">현금담보(관세청)</a></li>
+                                </ol>
+
+                            </li>
+
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">계좌이동/계좌통합관리</a>
+            
+                                <ol class="lnb_list manage">
+                                    <li><a rel="noopener noreferrer" href="#">KEB하나은행우대혜택</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">계좌이동서비스알아두세요</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">계좌이동</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">계좌통합관리서비스</a></li>
+                                </ol>
+
+                            </li>
+
+
+                            <li><a rel="noopener noreferrer" href="#">착오송금 조회/반환</a></li>
+                            <li><a rel="noopener noreferrer" href="#">연금계좌이체</a></li>
+
+                        </ol>
+
+                        <p class="bar bar1"></p>
+                        <p class="bar bar2"></p>
+                        <p class="bar bar3"></p>
+                        <p class="bar bar4"></p>  
+
+                    </div>
+
+                    <div class="lnb-three">
+                        <ol>
+                        <li>
+                            <a rel="noopener noreferrer" href="#">간편 에스크로</a>
+        
+                            <ol class="lnb_list">
+                                <li><a rel="noopener noreferrer" href="#">예치금 이체 확인</a></li>
+                                <li><a rel="noopener noreferrer" href="#">거래내역 조회</a></li>
+                            </ol>
+
+                        </li>
+                        </ol>
+                    </div>
+                </li>
+        
+        
+                <li>
+        
+                    <a class="nav3" rel="noopener noreferrer" href="#">공과금</a>
+                    <div class="lnb-container lnb3">
+                        <ol>
+        
+                            <li>
+                                <a rel="noopener noreferrer" href="#">My공과금</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">공과금등록/납부</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">공과금스케줄러</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">납부내역조회</a></li>
+                                </ol>
+                            </li>    
+
+                                
+                            <li>
+                                <a rel="noopener noreferrer" href="#">지로/생활요금/기타</a>
+            
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">지로납부</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">지로납부내역조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">KT통신요금</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">전기요금</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">상하수도요금</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">보관금</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">보관금</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">송달료</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">공탁금</a></li>
+                                </ol>
+
+                            </li>
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">지방세</a>
+            
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">지방세</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">환경개선부담금</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">세외수입</a></li>
+                                </ol>
+
+                            </li>
+
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">국세/관세</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">국세</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">관세</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">기금/기타국고</a></li>
+                                </ol>
+                            </li>
+
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">범칙금/벌과금</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">교통범칙금</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">검찰청벌과금</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                        
+                        <ol class="lnb-bottom">
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">대학등록금</a>
+            
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">원화</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">외화</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">등록금 납부내역</a></li>
+                                </ol>
+                            </li>
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">4대 보험료</a>
+            
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">국민연금(반납/추납보험료)</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">통합징수보험료</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">고용/산재보험(연납/분기납)</a></li>
+                                </ol>
+                            </li>
+
+                            <li><a rel="noopener noreferrer" href="#">아파트관리비</a></li>
+                            <li><a rel="noopener noreferrer" href="#">지로/공과금예약납부조회</a></li>
+                            <li><a rel="noopener noreferrer" href="#">지역개발채권</a></li>
+
+                        </ol>
+
+                        <p class="bar bar1"></p>
+                        <p class="bar bar2"></p>
+                        <p class="bar bar3"></p>
+                        <p class="bar bar4"></p>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+        
+                    <a class="nav4" rel="noopener noreferrer" href="#">외환</a>
+                    <div class="lnb-container lnb4">
+
+                        <ol>
+
+                            <li><a rel="noopener noreferrer" href="#">Best외환</a></li>
+
+
+                            <li><a rel="noopener noreferrer" href="#">환율/외화예금 금리</a></li>
+
+
+                            <li><a rel="noopener noreferrer" href="#">환전지갑</a></li>
+
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">외화송금</a>
+        
+                                <ol class="lnb_list currency">
+                                    <li><a rel="noopener noreferrer" href="#">송금안내</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">송금정보 등록/조회/변경</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">해외송금 보내기</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">국내송금 보내기</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">송금내역 조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">송금Tracking</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">거래외국환은행 지정</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">외화수표 추심결과조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">글로벌페이(paypal)송금</a></li>
+                                </ol>
+                            </li>  
+
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">외화계좌이체</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">당행외화이체안내</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">당행외화계좌이체</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">당행외화계좌이체결과조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">타행외화이체안내</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">타행외화계좌이체</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">타행외화계좌이체결과조회</a></li>
+                                </ol>
+                            </li>   
+
+                        </ol>
+
+                        <ol class="lnb-bottom">
+
+                            <li><a rel="noopener noreferrer" href="#">외환매매 예약서비스</a></li>
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">외화예금</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">계좌조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">거래내역조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">해지</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">만기일관리</a></li>
+                                </ol>
+                            </li> 
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">글로벌뱅킹</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">글로벌뱅킹안내</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">글로벌계좌조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">거래내역조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">글로벌뱅킹정보조회</a></li>
+                                </ol>
+                            </li> 
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">송금클럽</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">송금클럽 홈</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">송금클럽안내</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">송금클럽가입</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">My송금클럽</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">새클럽만들기</a></li>
+                                </ol>
+                            </li> 
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">환전클럽(서비스종료)</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">클럽이용안내</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">My환전클럽</a></li>
+                                </ol>
+                            </li> 
+
+                        </ol>
+
+                        <p class="bar bar1"></p>
+                        <p class="bar bar2"></p>
+                        <p class="bar bar3"></p>
+                        <p class="bar bar4"></p>
+            
+                    </div>
+                    
+                </li>
+
+
+
+                <li>
+        
+                    <a class="nav5" rel="noopener noreferrer" href="#">금융상품</a>
+                    <div class="lnb-container lnb5">
+                        <ol>
+
+                            <li><a rel="noopener noreferrer" href="#">추천상품</a></li>
+
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">예금</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">예금메인</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">상품&가입</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">예금조회/추가입금</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">계좌해지</a></li>
+                                </ol>
+                            </li>
+                            
+                            
+                            <li>
+                                <a rel="noopener noreferrer" href="#">대출</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">대출메인</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">상품&가입</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">이자납입</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">대출상환(원금)</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">예금담보대출</a></li>
+                                </ol>
+                            </li>
+                            
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">펀드</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">펀드메인</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">상품&가입</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">내펀드수익률조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">펀드조회/추가입금</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">펀드환매</a></li>
+                                </ol>
+                            </li>  
+                            
+                            
+                            <li>
+                                <a rel="noopener noreferrer" href="#">신탁</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">신탁상품</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">특정금전신탁(MMT/CMT)</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">연금저축신탁 해지/해지예상조회</a></li>
+                                </ol>
+                            </li>  
+                        </ol>
+
+                        <ol class="lnb-bottom">
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">퇴직연금/IRP</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">연금메인</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">나의퇴직연금</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">개인형IRP신규</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">추가입금/조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">통지서비스</a></li>
+                                </ol>
+                            </li>
+
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">ISA</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">ISA소개/가입</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">ISA조회/변경</a></li>
+                                </ol>
+                            </li>
+
+
+                            <li>
+                                <a rel="noopener noreferrer" href="#">보험</a>
+        
+                                <ol class="lnb_list">
+                                    <li><a rel="noopener noreferrer" href="#">보험메인</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">보험상품</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">보험가입내역</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">계약상세조회</a></li>
+                                    <li><a rel="noopener noreferrer" href="#">보험료 납입내역조회</a></li>
+                                </ol>
+                            </li>
+
+                        </ol>
+
+                        <p class="bar bar1"></p>
+                        <p class="bar bar2"></p>
+                        <p class="bar bar3"></p>
+                        <p class="bar bar4"></p>
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <ol class="banking">
+            <li><a rel="noopener noreferrer" href="#">기업뱅킹</a></li>
+            <li><a rel="noopener noreferrer" href="#">하나카드</a></li>
+            <li><a rel="noopener noreferrer" href="#">은행소개</a></li>
+            <li><a rel="noopener noreferrer" href="#">채용안내</a></li>
+        </ol>
+
+
+        <ol class="snb">
+            <li><a rel="noopener noreferrer" href="#">로그인</a></li>
+            <li><a rel="noopener noreferrer" href="#">인증센터</a></li>
+        </ol>
+
+        <a rel="noopener noreferrer" class="Language" href="#">Language</a>
+
+        <ol class="search">
+            <li><a rel="noopener noreferrer" href="#">돋보기</a></li>
+            <li><a rel="noopener noreferrer" href="#">메뉴</a></li>
+        </ol>
+
+        <div class="bigsech">
+            <p>검색어를 입력해 주세요.</p>
+            <a rel="noopener noreferrer" href="#">검색</a>
+        </div>
+        
+    </div>
+    
+</header>
+
+
+<!-- 슬라이드+ 조회 이체, 아이콘 -->
+<section>
+    <h2>하나은행 이벤트 배너</h2>
+
+    <article>
+        <h2>메인 슬라이드 배너</h2>
+        <div class="slides">
+            <ul>
+
+                    <li class="slide-6" data-num="6">
+                        <div class="p-container no6">
+                            <p>이벤트</p>
+                            <p>머니 머니 해도</p>
+                            <p>IRP는 하나로</p>
+                            <p>하나 IRP 거래하면?</p>
+                            <p>총5,000만 하나머니!</p>
+                            <p><a rel="noopener noreferrer" href="#">자세히보기</a></p>
+                        </div>
+                    </li>   
+
+                    <li class="slide-1" data-num="1">
+                        
+                        <div class="p-container no1">
+                            <p>이벤트</p>
+                            <p>방구석</p>
+                            <p>숨은 외화 찾기</p>
+                            <p>12종 외국 통화, 밀리언달러 통장에</p>
+                            <p>입금하고 현찰 수수료 면제받으세요.</p>
+                            <p><a rel="noopener noreferrer" href="#">자세히보기</a></p>
+                        </div>
+                    </li>
+
+                    <li class="slide-2" data-num="2">
+                        <div class="p-container no2">
+                            <p>이벤트</p>
+                            <p>처음인 손님도 기존손님도</p>
+                            <p>모두 모두 혜택홀릭!</p>
+                            <p>다양한 혜택이 있는</p>
+                            <p>원큐홀릭! 혜택홀릭! 이벤트</p>
+                            <p><a rel="noopener noreferrer" href="#">자세히보기</a></p>
+                        </div>   
+                    
+                    </li>
+
+                    <li class="slide-3" data-num="3">
+                        <div class="p-container no3">
+                            <p>이벤트</p>
+                            <p>10월 1일은</p>
+                            <p>하나데이</p>
+                            <p>진짜 오팔을 준다고?</p>
+                            <p>1~11,111 하나머니 행운도!</p>
+                            <p><a rel="noopener noreferrer" href="#">자세히보기</a></p>
+                        </div> 
+                    </li>
+
+                    <li class="slide-4" data-num="4">
+                        <div class="p-container no4">
+                            <p>이벤트</p>
+                            <p>전자증명서 이용하고</p>
+                            <p>치킨 받고, 하나머니 받고</p>
+                            <p>#정부24 전자증명서</p>
+                            <p>#주민등록본#공공문서13종</p>
+                            <p><a rel="noopener noreferrer" href="#">자세히보기</a></p>
+                        </div> 
+                    </li>
+
+                    <li class="slide-5" data-num="5">
+                        <div class="p-container no5">
+                            <p>이벤트</p>
+                            <p>안심전환대출</p>
+                            <p>신청안내</p>
+                            <p>변동금리 주택대출을</p>
+                            <p>고정금리로 갈아타세요.</p>
+                            <p><a rel="noopener noreferrer" href="#">자세히보기</a></p>
+                        </div> 
+                    </li>
+
+                    <li class="slide-6" data-num="6">
+                        <div class="p-container no6">
+                            <p>이벤트</p>
+                            <p>머니 머니 해도</p>
+                            <p>IRP는 하나로</p>
+                            <p>하나 IRP 거래하면?</p>
+                            <p>총5,000만 하나머니!</p>
+                            <p><a rel="noopener noreferrer" href="#">자세히보기</a></p>
+                        </div>
+                    </li>  
+                    
+                    <li class="slide-1" data-num="1">
+                            
+                        <div class="p-container no1">
+                            <p>이벤트</p>
+                            <p>방구석</p>
+                            <p>숨은 외화 찾기</p>
+                            <p>12종 외국 통화, 밀리언달러 통장에</p>
+                            <p>입금하고 현찰 수수료 면제받으세요.</p>
+                            <p><a rel="noopener noreferrer" href="#">자세히보기</a></p>
+                        </div>
+                    </li>
+                    
+            </ul>
+
+            <div class="btn_nav">
+                    <a rel="noopener noreferrer" class="auto pause" href="#">재생</a>
+                    <a rel="noopener noreferrer" class="prev" href="#">이전</a>
+                    <a rel="noopener noreferrer" class="next" href="#">다음</a>
+                    <p class="count">1</p>
+                    <p>/ 6</p>
+            </div>
+
+            <div class="btn_menu">
+                    <a rel="noopener noreferrer" href="#">btn 메뉴</a>
+            </div>
+
+        </div>
+
+        <!-- 조회, 이체 큰덩이 두개 -->
+        <ol class="inquire">
+
+            <li>
+                <a rel="noopener noreferrer" href="#">
+                    조회
+                 <span>></span>
+                </a>
+            </li>
+
+            <li>
+                <a rel="noopener noreferrer" href="#">
+                    이체
+                 <span>></span>
+                </a>
+            </li>
+
+        </ol>
+
+        <!-- 섹션 아이콘 6개 -->
+        <div class="icon-container">
+
+                <div class="icon">
+                <figure>
+
+                    <a rel="noopener noreferrer" href="#">
+                        <img src="./images/icon_quick01.png" alt="#">
+                    </a>
+
+                    <figcaption>
+                        <a rel="noopener noreferrer" href="#">
+                            공과금
+                        </a>
+                     </figcaption>
+
+                </figure>
+
+
+                <figure>
+                    <a rel="noopener noreferrer" href="#">
+                        <img src="./images/icon_quick02.png" alt="#">
+                    </a>
+
+                    <figcaption>
+                        <a rel="noopener noreferrer" href="#">
+                            환율
+                        </a>
+                     </figcaption>
+
+                </figure>
+
+
+                <figure>
+
+                    <a rel="noopener noreferrer" href="#">
+                        <img src="./images/icon_quick03.png" alt="#">
+                    </a>
+
+                    <figcaption>
+                        <a rel="noopener noreferrer" href="#">
+                            오픈뱅킹
+                        </a>
+                     </figcaption>
+
+                </figure>
+              </div>
+
+              <div class="icon">
+                <figure>
+
+                    <a rel="noopener noreferrer" href="#">
+                        <img src="./images/icon_quick04.png" alt="#">
+                    </a>
+
+                    <figcaption>
+
+                        <a rel="noopener noreferrer" href="#">
+                            인증센터
+                        </a>
+                     </figcaption>
+
+                </figure>
+
+
+                <figure>
+
+                    <a rel="noopener noreferrer" href="#">
+                        <img src="./images/icon_quick05.png" alt="#">
+                    </a>
+
+                    <figcaption>
+                        <a rel="noopener noreferrer" href="#">
+                            빠른조회
+                        </a>
+                     </figcaption>
+
+                </figure>
+
+
+                <figure>
+
+                    <a rel="noopener noreferrer" href="#">
+                        <img src="./images/icon_quick06.png" alt="#">
+                    </a>
+
+                    <figcaption>
+                        <a rel="noopener noreferrer" href="#">
+                            빠른상담
+                        </a>
+                     </figcaption>
+
+                </figure>
+              </div>
+
+
+
+        </div>
+
+    </article>
+    
+    <div class="shadow">
+        <div class="lightbox">
+            <a rel="noopener noreferrer" href="#">
+                <img src="./images/bg-sl1.png" alt="#">
+                <img src="./images/bg-sl2.png" alt="#">
+                <img src="./images/bg-sl3.jpg" alt="#">
+                <img src="./images/bg-sl4.png" alt="#">
+                <img src="./images/bg-sl5.png" alt="#">
+                <img src="./images/bg-sl6.png" alt="#">
+            </a>
+
+            <button class="clse">x</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- 슬라이드 섹션 바로 밑 -->
+<main>
+    <div>
+        <ol class="m-center">
+            <li><a rel="noopener noreferrer" href="#">예적금</a></li>
+            <li><a rel="noopener noreferrer" href="#">펀드</a></li>
+            <li><a rel="noopener noreferrer" href="#">환전지갑</a></li>
+            <li><a rel="noopener noreferrer" href="#">연금</a></li>
+            <li><a rel="noopener noreferrer" href="#">대출</a></li>
+        </ol>
+
+        <ol class="m-sub">
+            <li><a rel="noopener noreferrer" href="#">부자되는 알짜정보 </a></li>
+            <li><a rel="noopener noreferrer" href="#">한 눈에 보는 펀드랭킹</a></li>
+            <li><a rel="noopener noreferrer" href="#">알뜰하게 환전하기</a></li>
+            <li><a rel="noopener noreferrer" href="#">든든한 노후를 위해</a></li>
+            <li><a rel="noopener noreferrer" href="#">3분이면 한도조회 OK!</a></li>
+        </ol>
+
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+        <span class="bar bar4"></span>
+
+    </div>
+</main>
+
+
+<section class="notice">
+
+    <h2>공지</h2>
+
+    <!-- 새소식 -->
+    <div class="note-container">
+        
+        <div class="new head">
+            <p>새소식</p>
+            <a rel="noopener noreferrer" href="#">+ 더보기</a>
+        </div>
+
+        <div class="new">
+            <p><a rel="noopener noreferrer" href="#">CMS용 IT기기 도입 입찰 공고</a></p>
+            <p><a rel="noopener noreferrer" href="#">2022-09-28</a></p>
+        </div>
+
+        <div class="new">
+            <p><a rel="noopener noreferrer" href="#">『하나의 정기예금』적용금리 변경 안내</a></p>
+            <p><a rel="noopener noreferrer" href="#">2022-09-28</a></p>
+        </div>
+
+        <div class="new">
+            <p><a rel="noopener noreferrer" href="#">정기증설용 Hitachi/EMC 스토리지 입찰공고</a></p>
+            <p><a rel="noopener noreferrer" href="#">2022-09-27</a></p>
+        </div>
+
+        <!-- 자료실 -->
+        <div class="archives">
+
+            <ol>
+                <li><a rel="noopener noreferrer" href="#">상품공시실</a></li>
+                <li><a rel="noopener noreferrer" href="#">서식·약관자료실</a></li>
+            </ol>
+
+            <ol>
+                <li><a rel="noopener noreferrer" href="#">하나소비자세상</a></li>
+                <li class="speak"><a rel="noopener noreferrer" href="#">손님의소리
+                    <span>(칭찬/불만/제안 등)</span>
+                </a></li>
+            </ol>
+
+            <ol>
+                <li><a rel="noopener noreferrer" href="#">서민대출</a></li>
+                <li><a rel="noopener noreferrer" href="#">영업점찾기</a></li>
+            </ol>
+
+
+        </div>
+
+    </div>
+
+    <!-- 앱 바로가기 아이콘 -->
+    <div class="app">
+        
+        <ol>
+            <li><a rel="noopener noreferrer" href="#">하나원큐</a></li>
+            <li><a rel="noopener noreferrer" href="#">기업</a></li>
+            <li><a rel="noopener noreferrer" href="#">카드</a></li>
+            <li><a rel="noopener noreferrer" href="#">EZ</a></li>
+            <li><a rel="noopener noreferrer" href="#">M</a></li>
+            <li><a rel="noopener noreferrer" href="#">B</a></li>
+        </ol>
+    </div>
+
+
+</section>
+
+<footer>
+    <div class="f-container">
+
+        <div>
+            <ol>
+                <li><a rel="noopener noreferrer" href="#">사고신고 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">상품공시실 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">보호금융상품등록부 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">경영공시 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">퇴직연금공시 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">인증센터 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">원격지원상담 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">손님의소리 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">상담센터</a></li>
+            </ol>
+
+            <ol>
+                <li class="on"><a rel="noopener noreferrer" href="#">개인정보처리방침 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">본인정보이용제공현황 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">그룹사간고객정보제공내역조회 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">영업점찾기 &nbsp;·</a></li>
+                <li><a rel="noopener noreferrer" href="#">원큐금융상담서비스</a></li>
+            </ol>
+        </div>    
+        
+        <ol class="f-icon">
+            <li><a rel="noopener noreferrer" href="#">WA</a></li>
+            <li><a rel="noopener noreferrer" href="#">bsi</a></li>
+            <li><a rel="noopener noreferrer" href="#">ismp</a></li>
+        </ol>
+
+        <div class="network">
+            <ul>
+                <li class="net1">
+                    <a rel="noopener noreferrer" href="#">브랜드사이트</a>
+                    <div class="net-sub sub1">
+                        <p><a rel="noopener noreferrer" href="#">하나에스크로</a></p>
+                        <p><a rel="noopener noreferrer" href="#">퇴직연금</a></p>
+                        <p><a rel="noopener noreferrer" href="#">증권대행업무</a></p>
+                        <p><a rel="noopener noreferrer" href="#">유가증권수탁업무</a></p>
+                        <p><a rel="noopener noreferrer" href="#">외환포탈</a></p>
+                    </div>
+                </li>
+
+                <li class="net2">
+                    <a rel="noopener noreferrer" href="#">하나네트워크</a>
+                    <div class="net-sub sub2">
+                        <p><a rel="noopener noreferrer" href="#">하나금융그룹</a></p>
+                        <p><a rel="noopener noreferrer" href="#">하나은행</a></p>
+                        <p><a rel="noopener noreferrer" href="#">하나증권</a></p>
+                        <p><a rel="noopener noreferrer" href="#">하나카드</a></p>
+                        <p><a rel="noopener noreferrer" href="#">하나캐피탈</a></p>
+                        <p><a rel="noopener noreferrer" href="#">하나생명</a></p>
+                        <p><a rel="noopener noreferrer" href="#">하나손해보험</a></p>
+                    </div>
+                </li>
+
+
+                <li>
+                    <a rel="noopener noreferrer" href="#">글로벌네트워크</a>
+                </li>
+
+                <li class="net3">
+                    <a rel="noopener noreferrer" href="#">하나은행SNS</a>
+                    <div class="net-sub sub3">
+                        <p><a rel="noopener noreferrer" href="#">페이스북</a></p>
+                        <p><a rel="noopener noreferrer" href="#">유투브</a></p>
+                        <p><a rel="noopener noreferrer" href="#">인스타그램</a></p>
+                        <p><a rel="noopener noreferrer" href="#">블로그</a></p>
+                        <p><a rel="noopener noreferrer" href="#">트위터</a></p>
+                        <p><a rel="noopener noreferrer" href="#">카카오스토리</a></p>
+                    </div>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+        <div class="cs">
+            <p>고객센터</p>
+            <p>1588-1111 / 1599-1111</p>
+            <p>고객센터(해외)</p>
+            <p>+82-42-520-2500</p>
+        </div>
+
+        <div class="consumer">
+            <p><a rel="noopener noreferrer" href="#">하나소비자세상</a></p>
+        </div>
+    </div>
+
+</footer>
+
+
+
+</div>
+</body>
+</html>

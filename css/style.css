@@ -413,6 +413,9 @@ section#aboutme > .container > .profile > div:after {
   content: "";
 }
 section#aboutme > .container > .profile > div > .myphoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   background-image: url(./../images/aboutme/photo-frame.png);
   background-position: center bottom;
@@ -423,7 +426,6 @@ section#aboutme > .container > .profile > div > .myphoto > img {
   display: block;
   position: relative;
   z-index: -1;
-  margin: 0px 0 0 -50px;
 }
 section#aboutme > .container > .profile > div > ol {
   padding: 0 20px;
@@ -917,113 +919,6 @@ section#ability > .ability-container > .piechart > .item > .chart > .tit {
   font-weight: 500;
   font-size: 18px;
   line-height: 60px;
-}
-section#ability > .resume {
-  padding: 50px 0;
-  background-color: #fff;
-}
-@media screen and (max-width:640px) {
-  section#ability > .resume {
-    padding-bottom: 0;
-  }
-}
-section#ability > .resume > div {
-  padding: 0 30px;
-  display: flex;
-  justify-content: center;
-}
-@media screen and (max-width:640px) {
-  section#ability > .resume > div {
-    display: block;
-  }
-}
-section#ability > .resume > div > .frame {
-  display: block;
-  overflow: hidden;
-  width: 520px;
-  height: 340px;
-  margin-right: 50px;
-  border: 1px solid #000;
-}
-@media screen and (max-width:640px) {
-  section#ability > .resume > div > .frame {
-    width: 100%;
-    height: auto;
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-section#ability > .resume > div > .frame > img {
-  display: block;
-  width: 100%;
-  box-shadow: 1px 1px 5px #ccc;
-}
-section#ability > .resume > div > .iam {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-}
-section#ability > .resume > div > .iam > p {
-  line-height: 26px;
-}
-section#ability > .resume > div > .iam > p > span {
-  display: block;
-}
-@media screen and (max-width:640px) {
-  section#ability > .resume > div > .iam > p > span {
-    display: inline;
-  }
-}
-section#ability > .resume > div > .iam > a {
-  display: block;
-  width: 260px;
-  height: 40px;
-  color: #fff;
-  line-height: 40px;
-  letter-spacing: 1px;
-  text-align: center;
-  background-color: #222;
-  transition: all 0.2s;
-}
-@media screen and (max-width:640px) {
-  section#ability > .resume > div > .iam > a {
-    display: none;
-  }
-}
-section#ability > .resume > div > .iam > a:hover {
-  background-color: #52B3D9;
-}
-section#ability > .resume > div > .iam > .shadow {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  /* opacity: 0.75; */
-}
-section#ability > .resume > div > .iam > .shadow > .lightbox {
-  display: block;
-  overflow-y: scroll;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 1200px;
-  height: 800px;
-  margin: -400px 0 0 -600px;
-}
-section#ability > .resume > div > .iam > .shadow > .lightbox > img {
-  display: block;
-  width: 100%;
-}
-section#ability > .resume > div > .iam > .shadow > .clse {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: 370px 0 0 540px;
 }
 
 section#uxdesign {
