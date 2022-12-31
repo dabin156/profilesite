@@ -7,6 +7,7 @@
     border-radius: 10px;
 }
 
+
 section>video{
     display: block;
     width: 640px;
@@ -14,14 +15,14 @@ section>video{
     margin: 0 auto;
 }
 
-section>.controlgroup{
+section>.controlgruop{
     margin-top: 30px;
     text-align: center;
 }
 
-section>.controlgroup>button{
+section>.controlgruop>button{
     width: 200px;
     height: 30px;
 }
 
-section>.controlgroup>button:nth-child(2){margin: 0 50px;}
+section>.controlgruop>button:nth-child(2){margin: 0 50px;}
