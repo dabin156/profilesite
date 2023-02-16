@@ -1,18 +1,4 @@
 @charset "UTF-8";
-@-webkit-keyframes mousewheel {
-  0% {
-    top: 5px;
-    opacity: 0;
-  }
-  30% {
-    top: 10px;
-    opacity: 1;
-  }
-  100% {
-    top: 25px;
-    opacity: 0;
-  }
-}
 @keyframes mousewheel {
   0% {
     top: 5px;
@@ -186,8 +172,7 @@
   background-color: #fff;
   border-radius: 2px;
   text-indent: -9999px;
-  -webkit-animation: mousewheel 1s linear infinite;
-          animation: mousewheel 1s linear infinite;
+  animation: mousewheel 1s linear infinite;
 }
 #home > .bgmov {
   position: absolute;
@@ -274,14 +259,6 @@ header > .container > .btn-gnb {
   header > .container > .btn-gnb.clse {
     background-image: url(./../images/clse_btn.png);
   }
-  @-webkit-keyframes rotateBtn {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
   @keyframes rotateBtn {
     0% {
       transform: rotate(0);
@@ -291,8 +268,7 @@ header > .container > .btn-gnb {
     }
   }
   header > .container > .btn-gnb.clse:hover {
-    -webkit-animation: rotateBtn 0.5s;
-            animation: rotateBtn 0.5s;
+    animation: rotateBtn 0.5s;
   }
 }
 header > .container > nav {
@@ -1470,8 +1446,8 @@ section#portfolio > .slides > .slides-container > figure > figcaption > .etc > s
 }
 @media screen and (max-width:640px) {
   section#portfolio > .slides > .slides-container > figure > figcaption > .desc br,
-section#portfolio > .slides > .slides-container > figure > figcaption > .tools br,
-section#portfolio > .slides > .slides-container > figure > figcaption > .etc br {
+  section#portfolio > .slides > .slides-container > figure > figcaption > .tools br,
+  section#portfolio > .slides > .slides-container > figure > figcaption > .etc br {
     display: none;
   }
 }
@@ -2174,7 +2150,7 @@ footer > .info > .container > p {
 }
 @media screen and (max-width:640px) {
   footer > .info > .container > h2,
-footer > .info > .container > p {
+  footer > .info > .container > p {
     margin-bottom: 10px;
   }
 }

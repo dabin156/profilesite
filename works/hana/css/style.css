@@ -1052,4 +1052,7 @@
   font-weight: 600;
   font-family: "NotoSans_Regular";
   text-indent: 50px;
+}
+#wrap > footer > address {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
